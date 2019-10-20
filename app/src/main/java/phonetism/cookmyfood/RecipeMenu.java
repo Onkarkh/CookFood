@@ -1,14 +1,15 @@
 package phonetism.cookmyfood;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -17,11 +18,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
 
 public class RecipeMenu extends Fragment {
     private ListView listView;
@@ -90,7 +87,9 @@ public class RecipeMenu extends Fragment {
             }
         });
 
+
         listView.setAdapter(new CustomListMenu());
+
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
