@@ -17,7 +17,11 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
 
 public class RecipeMenu extends Fragment {
     private ListView listView;
@@ -39,6 +43,43 @@ public class RecipeMenu extends Fragment {
         listTitle = new ArrayList<>();
         listTitle.add("Chicken");
         listTitle.add("Soup");
+        listTitle.add("Pizza");
+        listTitle.add("Burger");
+        listTitle.add("Dessert");
+        listTitle.add("Veg");
+        listTitle.add("Roll");
+        listTitle.add("Pasta");
+        listTitle.add("Sandwich");
+        listTitle.add("Salad");
+        listTitle.add("Pie");
+        listTitle.add("Pork");
+        listTitle.add("Ice");
+        listTitle.add("Potatoes");
+        listTitle.add("Coffee");
+        listTitle.add("Cheese");
+        listTitle.add("Cake");
+        listTitle.add("Brownie");
+        listTitle.add("Buffalo");
+        listTitle.add("Italian");
+        listTitle.add("Bread");
+        listTitle.add("Mushroom");
+        listTitle.add("Avocado");
+        listTitle.add("Appetizers");
+        listTitle.add("Bacon");
+        listTitle.add("Rice");
+        listTitle.add("Muffins");
+        listTitle.add("Chocolate");
+        listTitle.add("Yogurt");
+        listTitle.add("Cookie");
+        listTitle.add("Beans");
+        listTitle.add("Dumplings");
+        listTitle.add("Butter");
+        listTitle.add("Egg");
+        listTitle.add("Wrap");
+        listTitle.add("Fruit");
+        listTitle.add("Milk");
+        listTitle.add("Vodka");
+
 
         savedRecipes.setOnClickListener(new View.OnClickListener() {
             @Override
