@@ -1,13 +1,16 @@
 package phonetism.cookmyfood;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -46,7 +49,7 @@ public class RecipeMenu extends Fragment {
             }
         });
 
-        listView.setAdapter(new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,listTitle));
+        listView.setAdapter(new CustomListMenu());
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -61,7 +64,35 @@ public class RecipeMenu extends Fragment {
             }
         });
 
-
         return view;
+    }
+
+    public class CustomListMenu extends BaseAdapter {
+
+        @Override
+        public int getCount() {
+            return listTitle.size();
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return listTitle.get(position);
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            TextView textView;
+            LayoutInflater layoutInflater = getLayoutInflater();
+            View view = layoutInflater.inflate(R.layout.fragment_custom_listmenu,null);
+
+            textView = view.findViewById(R.id.itemlist);
+            textView.setText(listTitle.get(position));
+            return view;
+        }
     }
 }

@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
     <Button
@@ -10,8 +11,7 @@
         android:layout_height="wrap_content"
         android:background="@color/colorBlack"
         android:text="@string/saved_recipes"
-        android:textColor="@color/colorWhite"
-        android:layout_marginBottom="3dp"/>
+        android:textColor="@color/colorWhite" />
 
     <ListView
         android:id="@+id/lvmenu"
