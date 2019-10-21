@@ -18,6 +18,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 import java.util.ArrayList;
 
 public class RecipeMenu extends Fragment {
@@ -29,6 +33,7 @@ public class RecipeMenu extends Fragment {
 
     private String keyword;
 
+    private AdView adView;
 
     @Nullable
     @Override
@@ -36,6 +41,11 @@ public class RecipeMenu extends Fragment {
         View view = inflater.inflate(R.layout.fragment_menu, container, false);
         listView = view.findViewById(R.id.lvmenu);
         savedRecipes = view.findViewById(R.id.savedRecipes);
+        MobileAds.initialize(getActivity(),"ca-app-pub-3940256099942544~3347511713");
+
+        adView = (AdView) view.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
 
         listTitle = new ArrayList<>();
         listTitle.add("Chicken");

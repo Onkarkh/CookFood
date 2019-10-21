@@ -20,6 +20,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import com.bumptech.glide.Glide;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 import java.util.ArrayList;
 
@@ -40,7 +44,9 @@ public class SavedRecipes extends Fragment {
     private String getSelectUrl;
     private String getSelectTitle;
 
-    DatabaseHelper databaseHelper;
+    private AdView adView;
+
+    public DatabaseHelper databaseHelper;
 
     @Nullable
     @Override
@@ -48,6 +54,11 @@ public class SavedRecipes extends Fragment {
         View view = inflater.inflate(R.layout.fragment_recipe, container, false);
         gridView = view.findViewById(R.id.fragmentGridView);
         btnMainMenu = view.findViewById(R.id.mainMenu);
+        MobileAds.initialize(getActivity(),"ca-app-pub-3940256099942544~3347511713");
+
+        adView = (AdView) view.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
 
         databaseHelper = new DatabaseHelper(getActivity());
 
