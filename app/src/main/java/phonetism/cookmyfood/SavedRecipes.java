@@ -54,7 +54,7 @@ public class SavedRecipes extends Fragment {
         View view = inflater.inflate(R.layout.fragment_recipe, container, false);
         gridView = view.findViewById(R.id.fragmentGridView);
         btnMainMenu = view.findViewById(R.id.mainMenu);
-        MobileAds.initialize(getActivity(),"ca-app-pub-3940256099942544~3347511713");
+        MobileAds.initialize(getActivity(),"ca-app-pub-4159448769103503~9105503094");
 
         adView = (AdView) view.findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();

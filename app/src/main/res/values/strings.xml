@@ -4,5 +4,8 @@
     <string name="test">Test</string>
     <string name="saved_recipes">Saved Recipes</string>
     <string name="title_activity_web_viewer">WebViewer</string>
-
+    <string name="ad_menu">ca-app-pub-4159448769103503/8245709386</string>
+    <string name="ad_recipe_menu">ca-app-pub-4159448769103503/3643640463</string>
+    <string name="ad_saved_recipe">ca-app-pub-4159448769103503/1199092917</string>
+    <string name="ad_web_view">ca-app-pub-4159448769103503/8502867862</string>
 </resources>

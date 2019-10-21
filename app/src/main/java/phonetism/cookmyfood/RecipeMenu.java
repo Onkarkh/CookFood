@@ -41,7 +41,7 @@ public class RecipeMenu extends Fragment {
         View view = inflater.inflate(R.layout.fragment_menu, container, false);
         listView = view.findViewById(R.id.lvmenu);
         savedRecipes = view.findViewById(R.id.savedRecipes);
-        MobileAds.initialize(getActivity(),"ca-app-pub-3940256099942544~3347511713");
+        MobileAds.initialize(getActivity(),"ca-app-pub-4159448769103503~9105503094");
 
         adView = (AdView) view.findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
