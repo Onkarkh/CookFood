@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CookMyFood</string>
+    <string name="app_name">CookFood</string>
     <string name="main_menu">Main Menu</string>
     <string name="test">Test</string>
     <string name="saved_recipes">Saved Recipes</string>
