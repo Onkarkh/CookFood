@@ -1,7 +1,5 @@
 package phonetism.cookmyfood;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -11,8 +9,9 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 
@@ -31,7 +30,7 @@ public class WebViewer extends AppCompatActivity {
         webViewer = findViewById(R.id.webview);
         MobileAds.initialize(this,"ca-app-pub-4159448769103503~9105503094");
 
-        adView = (AdView) findViewById(R.id.adView);
+        adView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
 

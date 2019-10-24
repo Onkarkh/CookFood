@@ -1,15 +1,14 @@
 package phonetism.cookmyfood;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 
@@ -23,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         loadMainMenu();
         toastMessage("Long Press the Recipe to Save!");
-        MobileAds.initialize(this,"ca-app-pub-4159448769103503~9105503094");
 
-        adView = (AdView) findViewById(R.id.adView);
+        MobileAds.initialize(this,"ca-app-pub-4159448769103503~9105503094");
+        adView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
     }
@@ -46,10 +45,10 @@ public class MainActivity extends AppCompatActivity {
         builder.setCancelable(true);
 
         builder.setNegativeButton(
-                "Cancel",
+                "Back",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        dialog.cancel();
+                        loadMainMenu();
                     }
                 });
 
