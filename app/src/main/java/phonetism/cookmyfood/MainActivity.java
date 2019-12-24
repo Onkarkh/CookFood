@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         loadMainMenu();
-        toastMessage("Long Press the Recipe to Save!");
+        toastMessage("Sorry!\n Currently the API has Shutdown!\n Hence the API can't fetch data from the Server.");
 
         MobileAds.initialize(this,"ca-app-pub-4159448769103503~9105503094");
         adView = findViewById(R.id.adView);
